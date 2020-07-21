@@ -1,6 +1,5 @@
 <template>
     <div id="app">
-        <app-header></app-header>
         <div class="intro">
 
         </div>
@@ -8,18 +7,20 @@
 </template>
 
 <script>
-import Header from '../components/Header'
 
 export default {
-    components: {
-        appHeader: Header,
-    }
+
 }
 </script>
 
 <style scoped>
  .intro {
-    min-height: 700px;
+    min-height: 90vh;
     width: 100%;
+    background: url('../assets/landing/landing-intro1.jpg') no-repeat center / cover;
+    position: relative;
+ }
+ #app {
+     height: 10000px;
  }
 </style>

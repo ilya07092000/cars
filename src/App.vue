@@ -1,11 +1,28 @@
 <template>
   <div id="app">
-    <router-view>
-      
-    </router-view>
+    <app-layout>
+      <router-view></router-view>
+    </app-layout>
   </div>
 </template>
 
-<style lang="scss">
+<script>
+import MainLayout from './layouts/MainLayout'
 
+export default {
+  components: {
+    appLayout: MainLayout,
+  }
+}
+</script>
+
+<style lang="scss">
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
 </style>
+
+
