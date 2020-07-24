@@ -8,6 +8,11 @@ Vue.use(VueRouter)
     path: '/',
     name: 'Landing',
     component: () => import('../views/Landing.vue')
+  },
+  {
+    path: '/catalog/:vendor',
+    name: 'catalog',
+    component: () => import('../views/Catalog.vue')
   }
 ]
 
