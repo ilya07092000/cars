@@ -23,9 +23,9 @@
             </ul>
         </nav>
         <div class="header__basket">
-            <router-link to="/" tag="a" class="header__basket__link">
+            <div class="header__basket__link" @click="openBasket">
                 <img class="header__basket__icon" src='../assets/icons/shopping-cart-solid2.svg' alt="">
-            </router-link>
+            </div>
         </div>
     </header>
 </template>
@@ -64,6 +64,15 @@
             width: 25px;
             height: 25px;
         }
+        &__link {
+            width: 40px;
+            height: 40px;
+            margin-left: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
     }
     .nav__list {
         display: flex;
@@ -81,7 +90,6 @@
                 font-weight: 600;
             }
         }
-
     }
 </style>
 
@@ -103,6 +111,13 @@ export default {
                 this.scroll = false;
                 this.color = 'white';
             }
+        },
+        openBasket() {
+            let basket = document.querySelector('.basket');
+            let mask = document.querySelector('.modal__mask');
+            mask.style.display = 'block';
+            basket.classList.add('basket__active');
+            document.body.style.overflow = 'hidden';
         }
     },
     created() {
