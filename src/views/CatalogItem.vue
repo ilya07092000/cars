@@ -1,6 +1,6 @@
 <template>
   <div class="catalog__item">
-    <router-link tag="a" :to="{name: 'title', params: { title: car.title, id: car.id }}" class="catalog__link" :car="car">
+    <router-link tag="a" :to="{name: 'title', params: { title: car.title, id: car.id, vendor: car.vendor }}" class="catalog__link" :car="car">
       <div class="catalog__item__icon">
         <img class="catalog__item__img" :src="car.img" alt />
       </div>

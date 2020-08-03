@@ -1,10 +1,10 @@
 <template>
     <div class="catalog">
-        <div class="catalog__header" :style="{backgroundImage: currentBg.bg}">
+        <div class="catalog__header" :style="{backgroundImage: bgnds.bg}">
             <h1 class="vendor">{{ vendor }}</h1>
         </div>
         <div class="catalog__items">
-            <catalogitem v-for="car in currentCar" :car="car" :key="car.id">
+            <catalogitem v-for="car in cars" :car="car" :key="car.id">
 
             </catalogitem>
         </div>
@@ -37,16 +37,10 @@ export default {
     },
     computed: {
         bgnds() {
-            return this.$store.getters.allbg;
+            return this.$store.getters.getbg(this.vendor)
         },
         cars() {
-            return this.$store.getters.getcars;
-        },
-        currentBg() {
-            return this.bgnds.find(item => item.vendor == this.vendor)
-        },
-        currentCar() {
-            return this.cars.filter(car => car.vendor == this.vendor);
+            return this.$store.getters.getcars(this.vendor)
         }
     },
     beforeRouteUpdate(to, from, next) {

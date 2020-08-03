@@ -1,27 +1,27 @@
 <template>
     <div class="basket">
         <div class="basket__header">
-            <p class="quantity">Your cart (0)</p>
+            <p class="quantity">Your cart ({{ basketItems.length }})</p>
             <button class="basket__close">
                 <img class="basket__close__icon" src="../assets/icons/times-circle-regular.svg" alt="">
             </button>
         </div>
         <div class="basket__body">
-            <div class="basket__item">
+            <div class="basket__item" v-for="basketItem in basketItems">
                 <div class="basket__item__photo">
                     <img src="https://www.brabus.com/_Resources/Persistent/0/f/4/b/0f4bfde5d96d0f0875c17e62b13cd1b81a1e345e/C4S_190%20%2820%29-730x411.jpg?bust=0f4bfde5" alt="" class="basket__item__icon">
                 </div>
                 <div class="basket__item__info">
-                    <p class="basket__item__title">BRABUS 450 - MERCEDES-AMG C 43</p>
-                    <p class="basket__item__price">100.000$</p>
+                    <p class="basket__item__title">{{ basketItem.title }}</p>
+                    <p class="basket__item__price">{{ basketItem.price }}</p>
                     <div class="basket__item__quantity">
                         <span class="basket__item__quantity__plus">-</span>
-                        <span class="basket__item__quantity__number">100</span>
+                        <span class="basket__item__quantity__number">{{ basketItem.quantity }}</span>
                         <span class="basket__item__quantity__minus">+</span>
                     </div>
                 </div>
                 <div class="basket__item__right">
-                    <p class="basket__item__total">100.000$</p>
+                    <p class="basket__item__total">{{ basketItem.price }}</p>
                     <button class="basket__item__remove"></button>
                 </div>
             </div>
@@ -138,6 +138,11 @@ export default {
                 document.body.style.overflow = 'auto';
             }
         }
+    },
+    computed: {
+        basketItems() {
+            return this.$store.getters.getBasket;
+        },
     },
     mounted() {
         window.addEventListener('click', this.closeModal);
