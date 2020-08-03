@@ -25,6 +25,7 @@
         <div class="header__basket">
             <div class="header__basket__link" @click="openBasket">
                 <img class="header__basket__icon" src='../assets/icons/shopping-cart-solid2.svg' alt="">
+                <div v-show="basketChecker.length" class="basket__checker"></div>
             </div>
         </div>
     </header>
@@ -60,6 +61,7 @@
     .header__basket {
         width: 150px;
         text-align: right;
+        position: relative;
         &__icon {
             width: 25px;
             height: 25px;
@@ -91,6 +93,16 @@
             }
         }
     }
+.basket__checker {
+    width: 15px;
+    height: 15px;
+    background-color: green;
+    border: 1px solid #fff;
+    border-radius: 150px;
+    position: absolute;
+    top: 4px;
+    right: 1px;
+}
 </style>
 
 <script>
@@ -118,6 +130,11 @@ export default {
             mask.style.display = 'block';
             basket.classList.add('basket__active');
             document.body.style.overflow = 'hidden';
+        }
+    },
+    computed: {
+        basketChecker() {
+            return this.$store.getters.getBasket
         }
     },
     created() {

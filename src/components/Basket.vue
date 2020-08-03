@@ -13,7 +13,7 @@
                 </div>
                 <div class="basket__item__info">
                     <p class="basket__item__title">{{ basketItem.title }}</p>
-                    <p class="basket__item__price">{{ basketItem.price }}</p>
+                    <p class="basket__item__price">{{ basketItem.price | price }}</p>
                     <div class="basket__item__quantity">
                         <span class="basket__item__quantity__plus">-</span>
                         <span class="basket__item__quantity__number">{{ basketItem.quantity }}</span>
@@ -21,7 +21,7 @@
                     </div>
                 </div>
                 <div class="basket__item__right">
-                    <p class="basket__item__total">{{ basketItem.price }}</p>
+                    <p class="basket__item__total">{{ basketItem.price * basketItem.quantity | price }}</p>
                     <button class="basket__item__remove"></button>
                 </div>
             </div>

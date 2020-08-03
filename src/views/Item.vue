@@ -5,7 +5,7 @@
         </div>
         <div class="item__content">
             <p class="item__title">{{ car.title }}</p>
-            <p class="item__price">Price: {{ car.price }}</p>
+            <p class="item__price">Price: {{ car.price | price }}</p>
             <button class="item__add" @click="addToBasket">Add to cart</button>
             <p class="item__content__name">TECHNICAL DATA</p>
             <div class="item_content__text__box">

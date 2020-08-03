@@ -5,7 +5,7 @@
         <img class="catalog__item__img" :src="car.img" alt />
       </div>
       <p class="catalog__item__title">{{ car.title }}</p>
-      <p class="catalog__item__price">{{ car.price }}</p>
+      <p class="catalog__item__price">{{ car.price | price }}</p>
     </router-link>
   </div>
 </template>

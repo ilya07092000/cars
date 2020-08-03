@@ -4,6 +4,11 @@ import './registerServiceWorker'
 import router from './router'
 import store from './store'
 
+Vue.filter('price', function(value) {
+  value = String(value).replace('.', ',') + '$'
+  return value
+}),
+
 Vue.config.productionTip = false
 
 new Vue({
