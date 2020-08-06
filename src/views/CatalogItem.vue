@@ -30,6 +30,7 @@ export default {
     width: 100%;
     height: 350px;
     border-radius: 3px;
+    transition: .2s linear;
   }
   &__title {
     font-size: 18px;
@@ -43,6 +44,9 @@ export default {
     margin-top: 5px;
     font-size: 14px;
     color: #000000bf;
+  }
+  &:hover .catalog__item__img {
+    box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.25);
   }
 }
 .catalog__link {

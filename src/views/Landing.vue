@@ -7,77 +7,14 @@
       <div class="best__header">
         <h1>Best Sellers</h1>
       </div>
-      <div class="best">
-        <ul class="best__list">
-          <li class="best__list__item">
-            <a href>
-              <div class="best__item__img">
-                <img class="best__item__icon" src="../assets/cars/brabus/brabus800.jpg" alt />
-              </div>
-              <p class="best__item__title">
-                  BRABUS 800 BLACK & GOLD EDITION
-              </p>
-            </a>
-          </li>
-         <li class="best__list__item">
-            <a href>
-              <div class="best__item__img">
-                <img class="best__item__icon" src="../assets/cars/brabus/brabus800.jpg" alt />
-              </div>
-              <p class="best__item__title">
-                  BRABUS 800 BLACK & GOLD EDITION
-              </p>
-            </a>
-          </li>
-          <li class="best__list__item">
-            <a href>
-              <div class="best__item__img">
-                <img class="best__item__icon" src="../assets/cars/brabus/brabus800.jpg" alt />
-              </div>
-              <p class="best__item__title">
-                  BRABUS 800 BLACK & GOLD EDITION
-              </p>
-            </a>
-          </li>
-         <li class="best__list__item">
-            <a href>
-              <div class="best__item__img">
-                <img class="best__item__icon" src="../assets/cars/brabus/brabus800.jpg" alt />
-              </div>
-              <p class="best__item__title">
-                  BRABUS 800 BLACK & GOLD EDITION
-              </p>
-            </a>
-          </li>
-          <li class="best__list__item">
-            <a href>
-              <div class="best__item__img">
-                <img class="best__item__icon" src="../assets/cars/brabus/brabus800.jpg" alt />
-              </div>
-              <p class="best__item__title">
-                  BRABUS 800 BLACK & GOLD EDITION
-              </p>
-            </a>
-          </li>
-         <li class="best__list__item">
-            <a href>
-              <div class="best__item__img">
-                <img class="best__item__icon" src="../assets/cars/brabus/brabus800.jpg" alt />
-              </div>
-              <p class="best__item__title">
-                  BRABUS 800 BLACK & GOLD EDITION
-              </p>
-            </a>
-          </li>
-        </ul>
-      </div>
+      <div class="catalog__items">
+            <catalogitem v-for="car in bestSellers" :car="car" :key="car.id">
+                
+            </catalogitem>
+        </div>
     </div>
   </div>
 </template>
-
-<script>
-export default {};
-</script>
 
 <style scoped lang="scss">
 #app {
@@ -131,4 +68,30 @@ export default {};
         font-weight: 500;
     }
 }
+.catalog__items {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: 1600px;
+    width: 100%;
+    margin: 0 auto;
+}
 </style>
+
+<script>
+import catalogitem from './CatalogItem';
+export default {
+  computed: {
+    bestSellers() {
+      return this.$store.getters.getBestSellers
+    },
+    landingImg() {
+        return this.$store.getters.landingImg
+    }
+  },
+  components: {
+    catalogitem
+  }
+}
+</script>

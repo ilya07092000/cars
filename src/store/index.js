@@ -35,6 +35,65 @@ export default new Vuex.Store({
        'https://cdn.motor1.com/images/mgl/0mL2m/s1/2021-bentley-bentayga.jpg'
       ] }
     ],
+    landingImg: [
+      'https://blog.mercedes-benz-passion.com/wp-cb4ef-content/uploads/CLA45_A45_GFOS_FOS_2019_Mercedes-AMG_421_PS_W177_C118_Bilder_2019_AMG_18.jpg',
+      'https://www.ixbt.com/img/n1/news/2019/11/4/dims_large.jpg',
+      'https://cdn.motor1.com/images/mgl/q3PZg/s1/rolls-royce-cullinan-feature-image.jpg',
+      'https://avtostat-info.com/Images/News/9287/Image.png'
+    ],
+    bestSellers: [
+      {
+        id: 2, 
+        vendor: 'mercedes', 
+        title: 'BRABUS 800 BLACK & GOLD EDITION', 
+        price: 441.612,
+        volume: '4 L', 
+        engine: '8-Cylinder',
+        power: '800 HP',
+        fuel: '16,6 l/100km', 
+        img: "https://www.brabus.com/_Resources/Persistent/9/a/c/9/9ac9ae212b43ffdcd89d341c479736acb9a1ba4d/C4S_029%20%2857%29-730x411.jpg?bust=9ac9ae21",
+        itemImg: [
+          "https://www.brabus.com/_Resources/Persistent/e/2/8/2/e2821a0f045ffedb6cfc7e60b1f9ce598eaf9eee/C4S_029%20%2846%29.jpg?bust=e2821a0f",
+          "https://www.brabus.com/_Resources/Persistent/2/7/4/2/2742ed6d3928cc3c65f0684b231eca3dd8d9a3cb/C4S_029%20%2850%29.jpg?bust=2742ed6d",
+          "https://www.brabus.com/_Resources/Persistent/0/f/4/5/0f456218ab5f9d4a4c9b22d89cb086f21885be40/C4S_029%20%2852%29.jpg?bust=0f456218",
+          "https://www.brabus.com/_Resources/Persistent/8/8/a/b/88abc9ee556b617289a4626bd09b14d8566e8db0/C4S_029%20%2854%29.jpg?bust=88abc9ee"
+        ]
+      },
+      {
+        id: 4, 
+        vendor: 'bmw', 
+        title: 'BMW 7 SERIES 750Li', 
+        volume: '4,4 L',
+        price: 98.000,
+        engine: '8-Cylinder',
+        power: '450 HP',
+        fuel: '8,4 l/100km', 
+        img: "https://bmw.autoua.net/media/catalog/4/2/p1751942-1435043537.jpg",
+        itemImg: [
+          "https://bmw.autoua.net/media/catalog/4/2/p1751942-1435043537.jpg",
+          "https://bmw.autoua.net/media/catalog/4/6/p1751946-1435043684.jpg",
+          "https://bmw.autoua.net/media/catalog/5/0/p1751950-1435043684.jpg",
+          "https://bmw.autoua.net/media/catalog/1/5/p1752315-1444728339.jpeg"
+        ]
+      }, 
+      {
+        id: 7, 
+        vendor: 'rolls-royce', 
+        title: 'Rolls-Royce Cullinan', 
+        volume: '6,7 L',
+        price: 407.000,
+        engine: '12-Cylinder',
+        power: '571 HP',
+        fuel: '15 l/100km', 
+        img: "https://rolls-royce.autoua.net/media/catalog/0/4/p1760004-1537178947.jpg",
+        itemImg: [
+          "https://rolls-royce.autoua.net/media/catalog/0/4/p1760004-1537178947.jpg",
+          "https://rolls-royce.autoua.net/media/catalog/0/5/p1760005-1537191716.jpg",
+          "https://rolls-royce.autoua.net/media/catalog/0/7/p1760007-1537191716.jpg",
+          "https://rolls-royce.autoua.net/media/catalog/1/2/p1760012-1537191716.jpg"
+        ]
+      }, 
+    ],
     cars: [
       {
         id: 1, 
@@ -248,6 +307,8 @@ export default new Vuex.Store({
     getbg: state => vendor => state.bgnds.find(bg => bg.vendor == vendor),
     getcars: state => vendor => state.cars.filter(car => car.vendor == vendor),
     getThisCar: state => id => state.cars.find(car => car.id == id),
-    getBasket: state => state.basket
+    getBasket: state => state.basket,
+    getBestSellers: state => state.bestSellers,
+    getLandingImg: state => state.landingImg,
   }
 })
