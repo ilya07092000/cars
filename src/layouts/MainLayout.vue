@@ -39,7 +39,6 @@ export default {
 <style lang="scss" scoped>
 .fade-enter, .fade-leave-to {
   opacity: 0;
-  transform: translateX(10px);
 }
 
 .fade-enter-active, .fade-leave-active {

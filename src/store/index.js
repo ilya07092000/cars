@@ -43,6 +43,40 @@ export default new Vuex.Store({
     ],
     bestSellers: [
       {
+        id: 11, 
+        vendor: 'mercedes', 
+        title: 'Mercedes S-Class (W222)', 
+        volume: '4 L',
+        price: 110.000,
+        engine: '8-Cylinder',
+        power: '469 HP',
+        fuel: '11.6 l/100km', 
+        img: "https://i.infocar.ua/i/2/5232/91917/1920x.jpg",
+        itemImg: [
+          "https://i.infocar.ua/i/2/5232/91917/1920x.jpg",
+          "https://i.infocar.ua/i/2/5232/91918/1920x.jpg",
+          "https://i.infocar.ua/i/2/5232/91919/1920x.jpg",
+          "https://i.infocar.ua/i/2/5232/91921/1920x.jpg"
+        ]
+      }, 
+      {
+        id: 14, 
+        vendor: 'bmw', 
+        title: 'BMW X6 M (F96)', 
+        volume: '4.4 L',
+        price: 92.000,
+        engine: '8-Cylinder',
+        power: '600 HP',
+        fuel: '16.8 l/100km', 
+        img: "https://i.infocar.ua/i/12/6014/1400x700.jpg",
+        itemImg: [
+          "https://i.infocar.ua/i/12/6014/1400x700.jpg",
+          "https://i.infocar.ua/i/2/6014/114673/1920x.jpg",
+          "https://i.infocar.ua/i/2/6014/114674/1920x.jpg",
+          "https://i.infocar.ua/i/2/6014/114675/1920x.jpg"
+        ]
+      }, 
+      {
         id: 2, 
         vendor: 'mercedes', 
         title: 'BRABUS 800 BLACK & GOLD EDITION', 
@@ -263,6 +297,91 @@ export default new Vuex.Store({
           "https://i.infocar.ua/i/2/6235/118522/1920x.jpg",
           "https://i.infocar.ua/i/2/6235/118523/1920x.jpg",
           "https://i.infocar.ua/i/2/6235/118524/1920x.jpg"
+        ]
+      }, 
+      {
+        id: 11, 
+        vendor: 'mercedes', 
+        title: 'Mercedes S-Class (W222)', 
+        volume: '4 L',
+        price: 110.000,
+        engine: '8-Cylinder',
+        power: '469 HP',
+        fuel: '11.6 l/100km', 
+        img: "https://i.infocar.ua/i/2/5232/91917/1920x.jpg",
+        itemImg: [
+          "https://i.infocar.ua/i/2/5232/91917/1920x.jpg",
+          "https://i.infocar.ua/i/2/5232/91918/1920x.jpg",
+          "https://i.infocar.ua/i/2/5232/91919/1920x.jpg",
+          "https://i.infocar.ua/i/2/5232/91921/1920x.jpg"
+        ]
+      }, 
+      {
+        id: 12, 
+        vendor: 'mercedes', 
+        title: 'Mercedes GLE-Class Coupe (C167)', 
+        volume: '3 L',
+        price: 95.000,
+        engine: '6-Cylinder',
+        power: '435 HP',
+        fuel: '11.7 l/100km', 
+        img: "https://i.infocar.ua/i/12/6032/1400x700.jpg",
+        itemImg: [
+          "https://i.infocar.ua/i/12/6032/1400x700.jpg",
+          "https://i.infocar.ua/i/2/6032/114906/1920x.jpg",
+          "https://i.infocar.ua/i/2/6032/114907/1920x.jpg",
+          "https://i.infocar.ua/i/2/6032/114908/1920x.jpg"
+        ]
+      }, 
+      {
+        id: 13, 
+        vendor: 'bmw', 
+        title: 'BMW M4 Coupe (F82)', 
+        volume: '3 L',
+        price: 79.000,
+        engine: '6-Cylinder',
+        power: '431 HP',
+        fuel: '12 l/100km', 
+        img: "https://i.infocar.ua/i/12/3398/1400x700.jpg",
+        itemImg: [
+          "https://i.infocar.ua/i/12/3398/1400x700.jpg",
+          "https://i.infocar.ua/i/2/3398/98670/1920x.jpg",
+          "https://i.infocar.ua/i/2/3398/98671/1920x.jpg",
+          "https://i.infocar.ua/i/2/3398/98672/1920x.jpg"
+        ]
+      }, 
+      {
+        id: 14, 
+        vendor: 'bmw', 
+        title: 'BMW X6 M (F96)', 
+        volume: '4.4 L',
+        price: 92.000,
+        engine: '8-Cylinder',
+        power: '600 HP',
+        fuel: '16.8 l/100km', 
+        img: "https://i.infocar.ua/i/12/6014/1400x700.jpg",
+        itemImg: [
+          "https://i.infocar.ua/i/12/6014/1400x700.jpg",
+          "https://i.infocar.ua/i/2/6014/114673/1920x.jpg",
+          "https://i.infocar.ua/i/2/6014/114674/1920x.jpg",
+          "https://i.infocar.ua/i/2/6014/114675/1920x.jpg"
+        ]
+      }, 
+      {
+        id: 15, 
+        vendor: 'audi', 
+        title: 'Audi S6', 
+        volume: '3 L',
+        price: 72.000,
+        engine: '6-Cylinder',
+        power: '349 HP',
+        fuel: '7.4 l/100km', 
+        img: "https://i.infocar.ua/i/12/5868/1400x700.jpg",
+        itemImg: [
+          "https://i.infocar.ua/i/12/5868/1400x700.jpg",
+          "https://i.infocar.ua/i/2/5868/115967/1920x.jpg",
+          "https://i.infocar.ua/i/2/5868/115968/1920x.jpg",
+          "https://i.infocar.ua/i/2/5868/115970/1920x.jpg"
         ]
       }, 
     ],

@@ -9,12 +9,12 @@
 
 <style scoped>
     .swiper {
-            width: 100%;
-            height: 95vh;
+        width: 100%;
+        height: 100vh;
     }
     .slide__img {
         width: 100%;
-        height: 95vh;
+        height: 100%;
         display: block;
     }
     @media(max-width: 1200px) {
@@ -27,6 +27,12 @@
         .swiper,
         .slide__img {
             height: 60vh;
+        }
+    }
+    @media(max-width: 576px) {
+        .swiper,
+        .slide__img {
+            height: 40vh;
         }
     }
 </style>
