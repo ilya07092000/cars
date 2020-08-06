@@ -52,4 +52,20 @@ export default {
 .catalog__link {
     text-decoration: none;
 }
+@media(max-width: 1200px) {
+  .catalog__item__img {
+    height: 250px;
+  }
+}
+@media(max-width: 992px) {
+  .catalog__item {
+    padding: 40px 20px 20px 20px;
+  }
+}
+@media(max-width: 760px) {
+ .catalog__item {
+   width: 100%;
+   padding-top: 20px;
+ }
+}
 </style>

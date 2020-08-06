@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <div class="intro">
+        <slider :items = "landingImg">
 
+        </slider>
     </div>
     <div class="best__container">
       <div class="best__header">
@@ -21,11 +23,7 @@
     background-color: #f5f5f5;
 }
 .intro {
-  min-height: 90vh;
   width: 100%;
-  background: url("../assets/landing/landing-intro1.jpg") no-repeat
-    center/contain;
-  position: relative;
   background-color: #f5f5f5;
   border-bottom: 2px solid #e0dada;
 }
@@ -77,21 +75,28 @@
     width: 100%;
     margin: 0 auto;
 }
+@media(max-width: 760px) {
+  .best__container {
+    padding: 20px 0;
+  }
+}
 </style>
 
 <script>
 import catalogitem from './CatalogItem';
+import slider from '@/components/Slider'
 export default {
   computed: {
     bestSellers() {
       return this.$store.getters.getBestSellers
     },
     landingImg() {
-        return this.$store.getters.landingImg
+        return this.$store.getters.getLandingImg
     }
   },
   components: {
-    catalogitem
+    catalogitem,
+    slider
   }
 }
 </script>

@@ -145,4 +145,33 @@ export default {
     .item__content__text {
         width: 50%;
     }
+@media(max-width: 760px) {
+    .item__inner {
+        flex-wrap: wrap;
+    }
+    .item__photos,
+    .item__content {
+        width: 100%;
+    }
+    .item__content {
+        order: 1;
+        margin-bottom: 20px;
+        padding-left: 0;
+    }
+    .item__photos {
+        order: 2;
+    }
+    .item__add {
+        width: 100%;
+        max-width: 100%;
+    }
+    .item__content__name {
+        margin-top: 30px;
+    }
+}
+@media(max-width: 500px) {
+    .item__inner  {
+        margin-top: 72px;
+    }
+}
 </style>
