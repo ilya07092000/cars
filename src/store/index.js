@@ -390,6 +390,7 @@ export default new Vuex.Store({
   mutations: {
     addToBasket(state, payload) {
       state.basket.push(payload)
+      console.log(state.basket)
     },
     addQuantity(state, payload) {
       payload.id = Number(payload.id)
@@ -404,7 +405,7 @@ export default new Vuex.Store({
       }
     },
     removeItem(state, payload) {
-      let item = state.basket.findIndex(item => item.id === payload.id);
+      let item = state.basket.findIndex(item => item.id == Number(payload.id));
       state.basket.splice(item, 1);
     }
   },

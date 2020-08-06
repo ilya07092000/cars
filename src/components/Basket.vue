@@ -34,6 +34,7 @@
     max-width: 550px;
     width: 100%;
     min-height: 100vh;
+    height: 100%;
     position: fixed;
     top: 0;
     right: 0;
@@ -42,6 +43,10 @@
     opacity: 0;
     transform: translateX(calc(100% + 20px));
     transition: .2s linear;
+    overflow-y: scroll;
+    &__body {
+        height: 100%;
+    }
     &__header {
         display: flex;
         justify-content: space-between;
