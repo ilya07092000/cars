@@ -3,6 +3,10 @@ import App from './App.vue'
 import './registerServiceWorker'
 import router from './router'
 import store from './store'
+import VueAwesomeSwiper from 'vue-awesome-swiper'
+import 'swiper/css/swiper.css'
+
+Vue.use(VueAwesomeSwiper, /* { default options with global component } */)
 
 Vue.filter('price', function(value) {
   value = String(value).replace('.', ',') + '$'

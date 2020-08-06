@@ -5,20 +5,24 @@
         </div>
         <div class="item__content">
             <p class="item__title">{{ car.title }}</p>
-            <p class="item__price">Price: {{ car.price | price }}</p>
+            <p class="item__price">Price: {{ car.price.toFixed(3) | price }}</p>
             <button class="item__add" @click="addToBasket">Add to cart</button>
             <p class="item__content__name">TECHNICAL DATA</p>
             <div class="item_content__text__box">
                 <p class="item__content__text">Engine:</p>
-                <p class="item__content__text">8-Cylinder</p>
+                <p class="item__content__text">{{ car.engine }}</p>
+            </div>
+             <div class="item_content__text__box">
+                <p class="item__content__text">Engine volume:</p>
+                <p class="item__content__text">{{ car.volume }}</p>
             </div>
             <div class="item_content__text__box">
                 <p class="item__content__text">Power:</p>
-                <p class="item__content__text">400 HP</p>
+                <p class="item__content__text">{{ car.power }}</p>
             </div>
             <div class="item_content__text__box">
                 <p class="item__content__text">FUEL ECONOMY:</p>
-                <p class="item__content__text">18,3 l/100km</p>
+                <p class="item__content__text">{{ car.fuel }}</p>
             </div>
         </div>
     </div>
@@ -47,6 +51,7 @@ export default {
                 price: this.car.price,
                 id: this.car.id,
                 quantity: 1,
+                img: this.car.img,
             })   
            } else {
                this.$store.dispatch('addQuantity', {
@@ -65,7 +70,6 @@ export default {
     },
     mounted() {
         this.carId = this.$route.params.id
-        console.log(this.$route)
     }
 }
 </script>

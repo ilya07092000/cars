@@ -5,7 +5,7 @@
         <img class="catalog__item__img" :src="car.img" alt />
       </div>
       <p class="catalog__item__title">{{ car.title }}</p>
-      <p class="catalog__item__price">{{ car.price | price }}</p>
+      <p class="catalog__item__price">{{ car.price.toFixed(3) | price }}</p>
     </router-link>
   </div>
 </template>
@@ -26,9 +26,9 @@ export default {
     text-decoration: underline;
   }
   &__img {
-    max-width: 100%;
+    max-width: 700px;
     width: 100%;
-    height: auto;
+    height: 350px;
     border-radius: 3px;
   }
   &__title {
@@ -36,6 +36,7 @@ export default {
     color: #000;
     margin-top: 10px;
     margin-left: 10px;
+    text-transform: uppercase;
   }
   &__price {
     margin-left: 10px;

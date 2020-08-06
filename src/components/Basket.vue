@@ -7,22 +7,22 @@
             </button>
         </div>
         <div class="basket__body">
-            <div class="basket__item" v-for="basketItem in basketItems">
+            <div class="basket__item" v-for="basketItem in basketItems" :id="basketItem.id">
                 <div class="basket__item__photo">
-                    <img src="https://www.brabus.com/_Resources/Persistent/0/f/4/b/0f4bfde5d96d0f0875c17e62b13cd1b81a1e345e/C4S_190%20%2820%29-730x411.jpg?bust=0f4bfde5" alt="" class="basket__item__icon">
+                    <img :src="basketItem.img" alt="" class="basket__item__icon">
                 </div>
                 <div class="basket__item__info">
                     <p class="basket__item__title">{{ basketItem.title }}</p>
-                    <p class="basket__item__price">{{ basketItem.price | price }}</p>
+                    <p class="basket__item__price">{{ basketItem.price.toFixed(3) | price }}</p>
                     <div class="basket__item__quantity">
-                        <span class="basket__item__quantity__plus">-</span>
+                        <span class="basket__item__quantity__plus" @click="minusQuantity">-</span>
                         <span class="basket__item__quantity__number">{{ basketItem.quantity }}</span>
-                        <span class="basket__item__quantity__minus">+</span>
+                        <span class="basket__item__quantity__minus" @click="addQuantity">+</span>
                     </div>
                 </div>
                 <div class="basket__item__right">
-                    <p class="basket__item__total">{{ basketItem.price * basketItem.quantity | price }}</p>
-                    <button class="basket__item__remove"></button>
+                    <p class="basket__item__total">{{ Number(basketItem.price * basketItem.quantity).toFixed(3) | price}}</p>
+                    <button class="basket__item__remove" @click="removeItem"></button>
                 </div>
             </div>
         </div>
@@ -136,6 +136,27 @@ export default {
                 basket.classList.remove('basket__active');
                 mask.style.display = 'none';
                 document.body.style.overflow = 'auto';
+            }
+        },
+        addQuantity() {
+            let id = event.target.closest('.basket__item').id;
+            this.$store.dispatch('addQuantity', {
+                id: id,
+            })
+        },
+        minusQuantity() {
+            let id = event.target.closest('.basket__item').id;
+            this.$store.dispatch('minusQuantity', {
+                id: id,
+            })
+        },
+        removeItem() {
+            let id = event.target.closest('.basket__item').id;
+            let check = confirm("Are you sure?");
+            if(check) {
+                    this.$store.dispatch('removeItem', {
+                    id: id,
+                })
             }
         }
     },
