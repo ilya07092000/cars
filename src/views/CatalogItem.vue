@@ -26,9 +26,9 @@ export default {
     text-decoration: underline;
   }
   &__img {
-    max-width: 700px;
+    max-width: 100%;
     width: 100%;
-    height: 350px;
+    height: auto;
     border-radius: 3px;
     transition: .2s linear;
   }
@@ -51,11 +51,6 @@ export default {
 }
 .catalog__link {
     text-decoration: none;
-}
-@media(max-width: 1200px) {
-  .catalog__item__img {
-    height: 250px;
-  }
 }
 @media(max-width: 992px) {
   .catalog__item {

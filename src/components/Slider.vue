@@ -10,30 +10,12 @@
 <style scoped>
     .swiper {
         width: 100%;
-        height: 100vh;
     }
     .slide__img {
         width: 100%;
-        height: 100%;
+        height: auto;
+        max-height: 100vh;
         display: block;
-    }
-    @media(max-width: 1200px) {
-        .swiper,
-        .slide__img {
-            height: 75vh;
-        }
-    }
-    @media(max-width: 992px) {
-        .swiper,
-        .slide__img {
-            height: 60vh;
-        }
-    }
-    @media(max-width: 576px) {
-        .swiper,
-        .slide__img {
-            height: 40vh;
-        }
     }
 </style>
 
