@@ -90,7 +90,7 @@ export default new Vuex.Store({
           "/cars/img/bmw/7s-1.jpg",
           "/cars/img/bmw/7s-2.jpg",
           "/cars/img/bmw/7s-3.jpg",
-          "/cars/img/bmw/7s-4.jpg",
+          "/cars/img/bmw/7s-4.jpeg",
         ]
       }, 
       {
@@ -147,23 +147,6 @@ export default new Vuex.Store({
         ]
       }, 
       {
-        id: 4, 
-        vendor: 'bmw', 
-        title: 'BMW 7 SERIES 750Li', 
-        volume: '4,4 L',
-        price: 98.000,
-        engine: '8-Cylinder',
-        power: '450 HP',
-        fuel: '8,4 l/100km', 
-        img: "/cars/img/bmw/7s-1.jpg",
-        itemImg: [
-          "/cars/img/bmw/7s-1.jpg",
-          "/cars/img/bmw/7s-2.jpg",
-          "/cars/img/bmw/7s-3.jpg",
-          "/cars/img/bmw/7s-4.jpg",
-        ]
-      }, 
-      {
         id: 2, 
         vendor: 'mercedes', 
         title: 'BRABUS 800 BLACK & GOLD EDITION', 
@@ -211,7 +194,7 @@ export default new Vuex.Store({
           "/cars/img/bmw/7s-1.jpg",
           "/cars/img/bmw/7s-2.jpg",
           "/cars/img/bmw/7s-3.jpg",
-          "/cars/img/bmw/7s-4.jpg",
+          "/cars/img/bmw/7s-4.jpeg",
         ]
       }, 
       {
