@@ -1,19 +1,5 @@
-# cars
+My own car shop. Vue + Vuex + Vue router.
 
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+https://cars-51930.web.app/
+OR
+https://ilya07092000.github.io/cars/
